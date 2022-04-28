@@ -7,7 +7,7 @@ Node Version 16.14.0
 2. run ```npm i``` in root directory
 3. run ```npm start``` 
 
-Fragen:
+# Zu klärende Fragen:
 
 1. Ist es möglich die Indizierung der Einträge mit Key-Value auf die Bedürfnisse von BlockPro anzupassen? 
 Beispielsweise Keys aus Timestamp und UserId/peerId des Prosumenten aufbauen? 
