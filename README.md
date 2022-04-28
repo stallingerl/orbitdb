@@ -1,7 +1,7 @@
 # BlockPro mit Orbit-DB Studie
 
 # Get Started
-Node Version 16.14.0
+[![npm version](https://badge.fury.io/js/orbit-db.svg)](https://www.npmjs.com/package/orbit-db) [![node](https://img.shields.io/node/v/orbit-db.svg)](https://www.npmjs.com/package/orbit-db)
 
 1. git clone this repo 
 2. run ```npm i``` in root directory
@@ -20,3 +20,5 @@ Node Version 16.14.0
 5. Haben andere Peers Read-Rechte auf meine lokale DB? Und wie wird sie gefunden? 
 
 6. Wie persiste ich die OrbitDB
+
+7. Use OrbitDB as an API
