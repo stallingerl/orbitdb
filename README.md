@@ -18,3 +18,7 @@ Beispielsweise Keys aus Timestamp und UserId/peerId des Prosumenten aufbauen?
 
 4. Welche Verarbeitung und Vorbereitung ist durch den Second-Layer Node nötig, um die Reportingbedürfnisse zu erfüllen?
 
+- als Key soll evtl. peerId und timestamp der Zählerlesung verwendet werden. 
+--> Timestamp muss aus Zählerstand   ausgelesen werden 
+
+--> kWh und Tarif
