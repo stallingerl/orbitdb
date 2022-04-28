@@ -3,9 +3,9 @@
 # Get Started
 Node Version 16.14.0
 
-´´´npm install```
-´´´npm start```
-
+1. git clone this repo 
+2. run ```npm i``` in root directory
+3. run ```npm start``` 
 
 Fragen:
 
