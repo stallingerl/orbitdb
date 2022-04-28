@@ -32,7 +32,7 @@ async function main() {
   
   */
 
-  // Create database instance
+// Database Type keyvalue
   const db = await orbitdb.keyvalue('first-database')
 
   // Address first-database
@@ -65,23 +65,25 @@ async function main() {
 
   db.close()
 
+
+// Database Type docstore
   const docstore = await orbitdb.docstore('docstoreDB')
 
   const hash1 = await docstore.put({ _id: 'QmPd9GVhyMJQ7iFqzxMgwUV5fwVdWhUNNbmqmhMkv66rF2', timestamp: 1651133617620, "1-0:1.8.0*255": 21678.1405 })
   const hash2 = await docstore.put({ _id: 'QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw', timestamp: 1651146233320, "1-0:1.8.0*255": 31678.1405 })
 
   const kWhGreater30000 = docstore.query((doc) => doc["1-0:1.8.0*255"] >= 30000 )
-  console.log("greater kWh than 30000: "+ kWhGreater30000[0]._id)
+  console.log("greater kWh than 30000: "+ kWhGreater30000[0]._id) // QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw
 
   const timestampGreater = docstore.query((doc) => doc.timestamp > 1651133617620 )
   console.log("timestamp greater than 1651133617620: "+ timestampGreater[0]._id)
 
-  const timeBetweenDates = docstore.query((doc) => doc.timestamp > 1651133617620 && doc.timestamp <= 1651146233320)
-  console.log("timestamp between 1651146233320 and 1651133617620" + timeBetweenDates[0]._id)
+  const idsBetweenDates = docstore.query((doc) => doc.timestamp > 1651133617620 && doc.timestamp <= 1651146233320)
+  console.log("timestamp between 1651146233320 and 1651133617620: " + idsBetweenDates[0]._id) //QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw
 
   // Filter by id and timestamp
-  const timeBetweenDatesById = docstore.query((doc) => doc.timestamp > 1651133617620 && doc.timestamp <= 1651146233320 && doc._id == "QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw")
-  console.log("timestamp between 1651146233320 and 1651133617620 and Id == QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw  " + timeBetweenDatesById[0]._id)
+  const betweenDatesById = docstore.query((doc) => doc.timestamp > 1651133617620 && doc.timestamp <= 1651146233320 && doc._id == "QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw")
+  console.log("timestamp between 1651146233320 and 1651133617620 and Id == QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw  " + betweenDatesById[0]._id) //QmTruqCipSu1fyRTdEjVFqghfr54ZpJz3ZC52gFmudb7Yw
 
   await docstore.close()
 }

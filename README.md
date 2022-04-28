@@ -9,8 +9,7 @@ Node Version 16.14.0
 
 # Zu klärende Fragen:
 
-1. Ist es möglich die Indizierung der Einträge mit Key-Value auf die Bedürfnisse von BlockPro anzupassen? 
-Beispielsweise Keys aus Timestamp und UserId/peerId des Prosumenten aufbauen? 
+1. Ist es möglich die Indizierung der Einträge mit einer Docstore-DB auf die Bedürfnisse von BlockPro anzupassen? 
 
 2. Welche Such- und Filtermöglichkeiten gibt es?
 
@@ -18,7 +17,6 @@ Beispielsweise Keys aus Timestamp und UserId/peerId des Prosumenten aufbauen?
 
 4. Welche Verarbeitung und Vorbereitung ist durch den Second-Layer Node nötig, um die Reportingbedürfnisse zu erfüllen?
 
-- als Key soll evtl. peerId und timestamp der Zählerlesung verwendet werden. 
---> Timestamp muss aus Zählerstand   ausgelesen werden 
+5. Haben andere Peers Read-Rechte auf meine lokale DB? Und wie wird sie gefunden? 
 
---> kWh und Tarif
+6. Wie persiste ich die OrbitDB
