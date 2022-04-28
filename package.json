@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "ipfs": "^0.62.3",
+    "orbit-db": "^0.28.4"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
