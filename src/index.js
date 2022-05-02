@@ -14,6 +14,9 @@ async function main()
     // Create docstore DB
     const docstore = await orbitDb.docstore('docstoreDB');
 
+    const vorhanden = docstore.query((doc) => doc.timestamp == 1651480604392)
+    console.log("gibts dich ", vorhanden)
+
     // Set variables
     const amount = 2000; // Amout of data to put
     const timestamp = new Date().getTime(); // Timestamp (Only set once so we don't affect performance too much)
