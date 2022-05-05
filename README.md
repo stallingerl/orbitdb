@@ -7,8 +7,8 @@
 2. run ```npm i``` in root directory
 3. run ```npm start``` 
 4. To run two docker containers with individual orbit and ipfs nodes run: 
-    ```docker-compose up``` and to execute ```docker exec -it orbit1 bash```  
-5. To try replication example run orbit 1 in container orbit 1 with: ```npm run orbit1``` and orbit2 with: ```npm run orbit2``` in container orbit2
+    ```docker-compose up``` and to execute ```docker exec -it orbit1 bash``` and in second terminal: ```docker exec -it orbit1 bash```
+5. To try replication example in container orbit 1 run: ```npm run orbit1``` and orbit2 with: ```npm run orbit2``` in container orbit2
 
 # Zu klärende Fragen:
 
@@ -22,6 +22,7 @@
 
 5. Haben andere Peers Read-Rechte auf meine lokale DB? Und wie wird sie gefunden? 
 
-6. Wie persiste ich die OrbitDB
+6. Wie persiste ich die OrbitDB?
+peers müssen über ipfs verbunden sein und den OrbitDB Pfad der Datenbank kennen. z.B.: /orbitdb/zdpuAyfPbM5Tm7bDjsBjWYAg97xyw5vppN7CnazMq38SQSV13/
 
 7. Use OrbitDB as an API
