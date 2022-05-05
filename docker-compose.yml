@@ -1,0 +1,47 @@
+version: "2"
+services:
+  peer1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /orbitdb/
+    image: "node:lts-buster"
+    hostname: orbit1
+    volumes:
+      - .:/orbitdb/
+    container_name: orbit1
+    stdin_open: true
+    tty: true
+    privileged: true
+    networks:
+      static:
+        ipv4_address: 172.23.0.2
+  peer2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /orbitdb/
+    image: "node:lts-buster"
+    hostname: orbit2
+    volumes:
+      - .:/orbitdb/
+    container_name: orbit2
+    stdin_open: true
+    tty: true
+    privileged: true
+    networks:
+      static:
+        ipv4_address: 172.23.0.3
+
+networks:
+  static:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.23.0.0/16
+          gateway: 172.23.0.1   
+
+
+
+
+

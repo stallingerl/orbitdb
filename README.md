@@ -6,6 +6,9 @@
 1. git clone this repo 
 2. run ```npm i``` in root directory
 3. run ```npm start``` 
+4. To run two docker containers with individual orbit and ipfs nodes run: 
+    ```docker-compose up``` and to execute ```docker exec -it orbit1 bash```  
+5. To try replication example run orbit 1 in container orbit 1 with: ```npm run orbit1``` and orbit2 with: ```npm run orbit2``` in container orbit2
 
 # Zu klärende Fragen:
 

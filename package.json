@@ -1,9 +1,15 @@
 {
   "dependencies": {
     "ipfs": "^0.62.3",
-    "orbit-db": "^0.28.4"
+    "libp2p-kad-dht": "^0.28.6",
+    "libp2p-mdns": "^0.18.0",
+    "orbit-db": "^0.28.4",
+    "peer-id": "^0.16.0"
   },
   "scripts": {
-    "start": "node src/index.js"
-  }
+    "start": "node src/index.js",
+    "orbit1": "PEER=./peerIds/id-1.json  node replication1.js",
+    "orbit2": "PEER=./peerIds/id-2.json  node replication2.js"
+  },
+  "type": "module"
 }
