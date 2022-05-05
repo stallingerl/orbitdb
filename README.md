@@ -26,3 +26,16 @@
 peers müssen über ipfs verbunden sein und den OrbitDB Pfad der Datenbank kennen. z.B.: /orbitdb/zdpuAyfPbM5Tm7bDjsBjWYAg97xyw5vppN7CnazMq38SQSV13/
 
 7. Use OrbitDB as an API
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[MIT © 2021 Webanizer AG.](./LICENSE.txt)
+
+
+## Contributing
+
+<a href="https://github.com/stallingerl/orbitdb/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=stallingerl/orbitdb" />
+</a>
